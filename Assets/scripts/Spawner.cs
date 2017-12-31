@@ -77,6 +77,13 @@ public class Spawner : MonoBehaviour {
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                contador.text = "GO!";
+                lvlEnd = false;
+                flechas.SetActive(true);
+                puerta.SetActive(true);
+            }
 
             timeLeft -= Time.deltaTime;
             contador.text = ((int)timeLeft).ToString();
